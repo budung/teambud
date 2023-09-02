@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+    <title>𝗧𝗘𝗔𝗠 𝗕𝗨𝗗</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+<!--
+
+TemplateMo 574 Mexant
+
+https://templatemo.com/tm-574-mexant
+
+-->
+
+
+<style>
+
+  html{
+    background-color: black;
+  }
+  
+</style>
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo.png" alt="">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="slide-inner" style="background-color: black;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="header-text">
+            <h2>로블록스 구축<br><em style="color: deepskyblue;">TEAM BUD</em></h2>
+            <div class="div-dec"></div>
+            <p>Team Bud는 2018년, 메타버스 공간을 제작해 온 유명 크리에이터들이 모여 만들어진 팀입니다. UI/UX 전문 디자이너, 루아 스크립트 개발자, 3D 모델러 등 전문 인력을 보유하고 있으며 여러 지자체, 스타트업, 시민단체 등의 제작 경험을 토대로 신속한 메타버스 공간 제작이 가능합니다.
+            <br>비즈니스 문의 : cs@budd.co.kr</p>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        var interleaveOffset = 0.5;
+
+      var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        mousewheelControl: true,
+        keyboardControl: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        on: {
+          progress: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              var slideProgress = swiper.slides[i].progress;
+              var innerOffset = swiper.width * interleaveOffset;
+              var innerTranslate = slideProgress * innerOffset;
+              swiper.slides[i].querySelector(".slide-inner").style.transform =
+                "translate3d(" + innerTranslate + "px, 0, 0)";
+            }      
+          },
+          touchStart: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = "";
+            }
+          },
+          setTransition: function(speed) {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = speed + "ms";
+              swiper.slides[i].querySelector(".slide-inner").style.transition =
+                speed + "ms";
+            }
+          }
+        }
+      };
+
+      var swiper = new Swiper(".swiper-container", swiperOptions);
+    </script>
+  </body>
+</html>
